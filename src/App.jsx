@@ -1,6 +1,6 @@
 import "./App.css";
 import './variables.css'
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
