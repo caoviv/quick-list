@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--off-white);
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.site-title {
+  font-family: var(--title-font);
+  font-size: 80px;
+  color: var(--green);
+}
