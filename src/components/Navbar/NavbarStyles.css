@@ -1,5 +1,5 @@
 header {
-  background-color: var(--off-white);
+  background-color: var(--green);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -12,8 +12,9 @@ nav {
 
 .site-title {
   font-family: var(--title-font);
-  font-size: 55px;
+  font-size: 50px;
+  line-height: 60px;
   font-weight: 500;
-  color: var(--green);
+  color: var(--yellow);
   text-decoration: none;
 }
