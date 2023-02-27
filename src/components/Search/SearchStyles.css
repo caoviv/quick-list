@@ -1,0 +1,15 @@
+.search {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.list {
+list-style: none;
+text-align: center;
+}
+
+.recipe {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
