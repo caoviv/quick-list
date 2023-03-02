@@ -7,7 +7,7 @@ function Search() {
     <div>
       <input
         type="text"
-        placeholder="Pick a recipe..."
+        placeholder="Select an option"
         className="search"
         onChange={(e) => setQuery(e.target.value)}
       />
