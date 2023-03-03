@@ -1,13 +1,13 @@
 import "./App.css";
-import './variables.css'
+import "./variables.css";
 import Navbar from "./components/Navbar/Navbar";
-import Search from "./components/Search/Search";
+import Selection from "./components/Selection/Selection";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Search />
+      <Selection />
     </div>
   );
 }

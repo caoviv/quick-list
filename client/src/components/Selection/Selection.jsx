@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// CSS Styles 
-import "./SearchStyles.css";
+// CSS Styles
+import "./SelectionStyles.css";
 
-function Search() {
+function Selection() {
   // states
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
@@ -46,4 +46,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default Selection;
