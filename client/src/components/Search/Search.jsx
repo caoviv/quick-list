@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+// CSS Styles 
+import "./SearchStyles.css";
+
 function Search() {
   // states
   const [query, setQuery] = useState("");
@@ -24,7 +27,7 @@ function Search() {
       <input
         type="text"
         placeholder="Pick a recipe..."
-        className="search"
+        className="search-bar"
         // set value of the text input to data state for filter function
         onChange={(e) => setQuery(e.target.value)}
       />
@@ -34,7 +37,7 @@ function Search() {
           // iterate over recipes array using .map
           .map((recipe) => (
             // output makes a list of recipes from the data fetched
-            <li key={recipe.id} className="recipe">
+            <li key={recipe.id} className="recipe-item">
               {recipe.name}
             </li>
           ))}
