@@ -1,6 +1,40 @@
 export const Recipes = [
   {
     id: 1,
+    name: "Spaghetti Bolognese",
+    ingredients: [
+      "1 1/2 tbsp olive oil",
+      "2 garlic cloves",
+      "1 onion",
+      "500g beef mince",
+      "1/2 cup beef stock",
+      "2 beef bouillon cubes",
+      "800g can crushed tomato",
+      "2 tbsp tomato paste",
+      "2 tsp white sugar ",
+      "2 tsp Worcestershire sauce",
+      "2 dried bay leaves",
+      "1/2 tsp dried thyme or oregano)",
+      "Salt and pepper",
+    ],
+  },
+  {
+    id: 2,
+    name: "Thai Larb",
+    ingredients: [
+      "300 grams minced pork",
+      "1/2 - 1 tablespoon chili flakes",
+      "1/8 tablespoon sugar",
+      "1/2 tablespoon fish sauce",
+      "1 - 2 limes",
+      "3 - 4 small shallots",
+      "A few leaves Culantro",
+      "3 - 5 spring onions",
+      "About 20 leaves fresh mint",
+    ],
+  },
+  {
+    id: 3,
     name: "Mapo Tofu",
     ingredients: [
       "120 grams ground pork",
@@ -20,7 +54,7 @@ export const Recipes = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "Spanish Rice with Chorizo",
     ingredients: [
       "50 grams rice (uncooked)",
