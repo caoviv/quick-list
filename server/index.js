@@ -19,5 +19,10 @@ app.get("/", (req, res) => {
     return data.filter((recipe) => recipe.name.toLowerCase().includes(q));
   };
 
+  
+  // When implementing Mongodb 
+  // const recipes = Recipe.find({$regex: q})
+  // recipes var from above is then put as an argument in the below response.json replacing Recipes from recipes.js file
+
   res.json(search(Recipes));
 });
