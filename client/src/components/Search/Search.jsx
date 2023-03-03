@@ -12,13 +12,13 @@ function Search() {
     // fetch recipe data function
     const fetchRecipes = async () => {
       // use axios to make a get request for recipes data from local server 5000
-      const res = await axios.get("http://localhost:5000");
-      // response is then set to data status
+      const res = await axios.get(`http://localhost:5000/?q=${query}`);
+      // response is then set to data state
       setData(res.data);
     };
     fetchRecipes();
-    // empty array - runs only on the first render
-  }, []);
+    // runs when query state is changes
+  }, [query]);
 
   return (
     <div>
@@ -26,13 +26,13 @@ function Search() {
         type="text"
         placeholder="Pick a recipe..."
         className="search"
-        // set value of the text input to data status for filter function 
+        // set value of the text input to data state for filter function
         onChange={(e) => setQuery(e.target.value)}
       />
       <ul className="recipe-list">
-        {/* use data status  */}
+        {/* use data state  */}
         {data
-          // iterate over recipes array using .map 
+          // iterate over recipes array using .map
           .map((recipe) => (
             // output makes a list of recipes from the data fetched
             <li key={recipe.id} className="recipe">
