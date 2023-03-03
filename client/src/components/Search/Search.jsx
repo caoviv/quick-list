@@ -32,9 +32,6 @@ function Search() {
       <ul className="recipe-list">
         {/* use data status  */}
         {data
-        // filter data according to the query status 
-        // recipe name is set to lower case to avoid case sensitivity
-          .filter((recipe) => recipe.name.toLowerCase().includes(query))
           // iterate over recipes array using .map 
           .map((recipe) => (
             // output makes a list of recipes from the data fetched

@@ -11,5 +11,13 @@ app.listen(PORT, () =>
 );
 
 app.get("/", (req, res) => {
-  res.json(Recipes);
+  const { q } = req.query;
+
+  const search = (data) => {
+    // filter data which includes the req.query
+    // recipe name is set to lower case to avoid case sensitivity
+    return data.filter((recipe) => recipe.name.toLowerCase().includes(q));
+  };
+
+  res.json(search(Recipes));
 });
