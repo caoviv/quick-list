@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Recipes } from "../../data/recipes";
 import axios from "axios";
 
 function Search() {
