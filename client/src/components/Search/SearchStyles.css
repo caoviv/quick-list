@@ -1,15 +1,19 @@
+.search-bar {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.recipe-list {
+  list-style: none;
+}
+
+.recipe-item {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
 .search {
-    padding: 10px;
-    font-size: 20px;
-}
-
-.list {
-list-style: none;
-text-align: center;
-}
-
-.recipe {
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 300;
+  border: black;
+  padding: 30px;
 }
