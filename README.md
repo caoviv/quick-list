@@ -6,3 +6,13 @@ Quick List is a web application designed to simplify the meal planning process b
  - Frontend framework: React.js
  - Server-side language: Node.js; framework: Express.js
  - Database: MongoDB
+ - JavaScript Libraries
+   - Axios
+
+Technology Stack  | HTML, CSS, and JavaScript
+------------- | -------------
+Frontend framework | React.js
+Server-side language  | Node.js
+Database  | MongoDB
+JavaScript Libraries & Frameworks  | Express.js
+  | Axios
