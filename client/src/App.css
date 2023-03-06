@@ -14,3 +14,7 @@ body {
 .recipes-search-comp {
   width: 30%;
 }
+
+.main-section {
+  display: flex;  
+}
