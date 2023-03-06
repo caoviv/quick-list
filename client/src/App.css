@@ -9,3 +9,7 @@ body {
     background-color: var(--off-white);
     color: #111;
 }
+
+.selection-comp {
+    width: 30%;
+}

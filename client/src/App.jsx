@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Selection />
+      <Selection className="selection-comp"/>
     </div>
   );
 }
