@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 // CSS Styles
-import "./SelectionStyles.css";
+import "./RecipeSearchStyles.css";
 
-function Selection() {
+function RecipeSearch() {
   // states
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
@@ -46,4 +46,4 @@ function Selection() {
   );
 }
 
-export default Selection;
+export default RecipeSearch;

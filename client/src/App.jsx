@@ -1,13 +1,13 @@
 import "./App.css";
 import "./variables.css";
 import Navbar from "./components/Navbar/Navbar";
-import Selection from "./components/Selection/Selection";
+import RecipeSearch from "./components/RecipeSearch/RecipeSearch";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Selection className="selection-comp"/>
+      <RecipeSearch className="recipe-search-comp" />
     </div>
   );
 }
