@@ -23,7 +23,7 @@ function Selection() {
   }, [query]);
 
   return (
-    <div>
+    <div className="wrapper">
       <input
         type="text"
         placeholder="Pick a recipe..."
