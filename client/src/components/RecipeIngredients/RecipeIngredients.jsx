@@ -3,7 +3,7 @@ import "./RecipeIngredientsStyles.css";
 
 function RecipeIngredients() {
   return (
-    <div>
+    <div className="wrapper">
       <h1>Ingredients</h1>
     </div>
   );
