@@ -11,7 +11,6 @@ function App() {
       <Navbar />
       <section className="main-section">
         <RecipeSearch className="recipe-search-comp" />
-        <RecipeIngredients />
         <GroceryList />
       </section>
     </div>
