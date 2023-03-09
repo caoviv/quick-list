@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import RecipeIngredients from "../RecipeIngredients/RecipeIngredients";
+
 // CSS Styles
 import "./RecipeSearchStyles.css";
 
@@ -8,6 +10,8 @@ function RecipeSearch() {
   // states
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
+  const [viewIngredients, setViewIngredients] = useState(false);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   // effect after render
   useEffect(() => {
@@ -21,6 +25,11 @@ function RecipeSearch() {
     fetchRecipes();
     // runs when query state is changes
   }, [query]);
+
+  const handleRecipeClick = (recipe) => {
+    setViewIngredients(true);
+    setSelectedRecipe(recipe);
+  };
 
   return (
     <div className="wrapper">
@@ -37,11 +46,21 @@ function RecipeSearch() {
           // iterate over recipes array using .map
           .map((recipe) => (
             // output makes a list of recipes from the data fetched
-            <li key={recipe.id} className="recipe-item">
+            <li
+              key={recipe.id}
+              className="recipe-item"
+              onClick={() => handleRecipeClick(recipe)}
+            >
               {recipe.name}
             </li>
           ))}
       </ul>
+      {viewIngredients && (
+        <RecipeIngredients
+          recipe={selectedRecipe}
+          // onClose={() => setViewIngredients(false)}
+        />
+      )}
     </div>
   );
 }
