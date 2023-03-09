@@ -3,15 +3,17 @@ import { Recipes } from "../../../data/recipes";
 // CSS Styles
 import "./RecipeIngredientsStyles.css";
 
-function RecipeIngredients() {
+function RecipeIngredients({ recipe }) {
   return (
-    <div className="wrapper">
+    <div className="container">
       <h1>Ingredients</h1>
+      <h2>{recipe.name}</h2>
       <ul className="ingredients-list">
-        <li  className="ingredient-item">
-          {Recipes[0].ingredients.map((item) => <li>{item}</li>)}
-        </li>
+        {recipe.ingredients.map((ingredient, index) => (
+          <li key={index}>{ingredient}</li>
+        ))}
       </ul>
+      {/* <button onClick={onClose}>Close</button> */}
     </div>
   );
 }
