@@ -32,29 +32,31 @@ function RecipeSearch() {
   };
 
   return (
-    <div className="wrapper">
-      <input
-        type="text"
-        placeholder="Pick a recipe..."
-        className="search-bar"
-        // set value of the text input to data state for filter function
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <ul className="recipe-list">
-        {/* use data state  */}
-        {data
-          // iterate over recipes array using .map
-          .map((recipe) => (
-            // output makes a list of recipes from the data fetched
-            <li
-              key={recipe.id}
-              className="recipe-item"
-              onClick={() => handleRecipeClick(recipe)}
-            >
-              {recipe.name}
-            </li>
-          ))}
-      </ul>
+    <div className="main-wrapper">
+      <section className="module">
+        <input
+          type="text"
+          placeholder="Pick a recipe..."
+          className="search-bar"
+          // set value of the text input to data state for filter function
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <ul className="recipe-list">
+          {/* use data state  */}
+          {data
+            // iterate over recipes array using .map
+            .map((recipe) => (
+              // output makes a list of recipes from the data fetched
+              <li
+                className="recipe-item"
+                key={recipe.id}
+                onClick={() => handleRecipeClick(recipe)}
+              >
+                {recipe.name}
+              </li>
+            ))}
+        </ul>
+      </section>
       {viewIngredients && (
         <RecipeIngredients
           recipe={selectedRecipe}

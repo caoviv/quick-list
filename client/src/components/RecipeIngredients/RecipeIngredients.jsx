@@ -5,7 +5,7 @@ import "./RecipeIngredientsStyles.css";
 
 function RecipeIngredients({ recipe }) {
   return (
-    <div className="container">
+    <div class="module">
       <h1>Ingredients</h1>
       <h2>{recipe.name}</h2>
       <ul className="ingredients-list">
