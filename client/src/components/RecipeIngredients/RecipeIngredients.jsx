@@ -10,7 +10,10 @@ function RecipeIngredients({ recipe }) {
       <h2>{recipe.name}</h2>
       <ul className="ingredients-list">
         {recipe.ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
+          <li>
+            <input type={"checkbox"} name={ingredient} key={index} />
+            <label for="ingredient">{ingredient}</label>
+          </li>
         ))}
       </ul>
       {/* <button onClick={onClose}>Close</button> */}
