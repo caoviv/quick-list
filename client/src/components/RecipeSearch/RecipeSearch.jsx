@@ -26,8 +26,11 @@ function RecipeSearch() {
     // runs when query state is changes
   }, [query]);
 
+  // function handles clicks on recipe list items 
   const handleRecipeClick = (recipe) => {
+    // set setViewIngredients to true - which renders the RecipeIngredients component
     setViewIngredients(true);
+    // stores the recipe that was clicked in the selectedRecipe state
     setSelectedRecipe(recipe);
   };
 
@@ -57,6 +60,7 @@ function RecipeSearch() {
             ))}
         </ul>
       </section>
+      {/* conditional render RecipeIngredients comp only when a recipe is clicked  */}
       {viewIngredients && (
         <RecipeIngredients
           recipe={selectedRecipe}
