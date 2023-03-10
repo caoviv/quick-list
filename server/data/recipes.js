@@ -14,7 +14,7 @@ export const Recipes = [
       "2 tsp white sugar ",
       "2 tsp Worcestershire sauce",
       "2 dried bay leaves",
-      "1/2 tsp dried thyme or oregano)",
+      "1/2 tsp dried thyme or oregano",
       "Salt and pepper",
     ],
   },
