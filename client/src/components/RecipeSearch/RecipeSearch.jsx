@@ -13,7 +13,7 @@ function RecipeSearch() {
   const [viewIngredients, setViewIngredients] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  // effect after render
+  // effects
   useEffect(() => {
     // fetch recipe data function
     const fetchRecipes = async () => {
@@ -25,14 +25,14 @@ function RecipeSearch() {
     fetchRecipes();
     // runs when query state is changes
   }, [query]);
-
+  
   // function handles clicks on recipe list items 
   const handleRecipeClick = (recipe) => {
     // set setViewIngredients to true - which renders the RecipeIngredients component
     setViewIngredients(true);
     // stores the recipe that was clicked in the selectedRecipe state
     setSelectedRecipe(recipe);
-  };
+  };  
 
   return (
     <div className="main-wrapper">
@@ -64,7 +64,6 @@ function RecipeSearch() {
       {viewIngredients && (
         <RecipeIngredients
           recipe={selectedRecipe}
-          // onClose={() => setViewIngredients(false)}
         />
       )}
     </div>

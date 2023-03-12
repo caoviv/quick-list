@@ -43,7 +43,6 @@ function RecipeIngredients({ recipe }) {
             </li>
           ))}
         </ul>
-        {/* <button onClick={onClose}>Close</button> */}
         <button onClick={() => setViewGroceryList(true)}>+ Add to list</button>
       </section>
       {/* conditional render GroceryList comp only when a recipe is clicked  */}
