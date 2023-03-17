@@ -6,27 +6,15 @@ import "./RecipeIngredientsStyles.css";
 
 function RecipeIngredients({ recipe }) {
   // states
-  const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const [groceryList, setGroceryList] = useState([]);
   const [viewGroceryList, setViewGroceryList] = useState(false);
-  const handleCheckBoxChange = (event) => {
-    // object destructuring to extract 'value' and 'checked' from checkbox element
-    const { value, checked } = event.target;
-    // when the checkbox is checked
-    if (checked) {
-      // add the ingredient checked to the selectedIngredient state
-      setSelectedIngredients([...selectedIngredients, value]);
-      // when the checkbox is unchecked
-    } else {
-      // remove the ingredient checked to the selectedIngredient state
-      setSelectedIngredients(
-        selectedIngredients.filter((ingredient) => ingredient !== value)
-      );
-    }
-  };
+  const [checkedState, setCheckedState] = useState(false);
+
+  const handleCheckboxChange = (position) => {};
 
   return (
     <div class="module">
-      <section>
+      <form>
         <h1>Ingredients</h1>
         <h2>{recipe.name}</h2>
         <ul className="ingredients-list">
@@ -35,18 +23,21 @@ function RecipeIngredients({ recipe }) {
               <label>
                 <input
                   type="checkbox"
+                  id={`custom-checkbox-${index}`}
                   value={ingredient}
-                  onChange={handleCheckBoxChange}
+                  checked={checkedState[index]}
+                  onChange={handleCheckboxChange(index)}
                 />
                 {ingredient}
               </label>
             </li>
           ))}
         </ul>
+        <input type="reset" value="Unselect all" />
         <button onClick={() => setViewGroceryList(true)}>+ Add to list</button>
-      </section>
-      {/* conditional render GroceryList comp only when a recipe is clicked  */}
-      {viewGroceryList && <GroceryList ingredients={selectedIngredients} />}
+      </form>
+      {/* conditional render GroceryList comp only when a button is clicked for the first time*/}
+      {viewGroceryList && <GroceryList groceryList={groceryList} />}
     </div>
   );
 }
