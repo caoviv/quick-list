@@ -1,12 +1,12 @@
 // CSS Styles
 import "./GroceryListStyles.css";
 
-function GroceryList({ ingredients }) {
+function GroceryList({ groceryList }) {
   return (
     <div className="wrapper">
       <h1>Grocery List</h1>
       <ul>
-        {ingredients.map((ingredient, index) => (
+        {groceryList.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
         ))}
       </ul>
